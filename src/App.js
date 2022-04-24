@@ -16,9 +16,7 @@ function App() {
     setIsLoading(true)
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/users')
-      console.log(response)
       const data = await response.json();
-      console.log(data)
       setUsers(data)
     } catch (error) {
       console.log(error)
@@ -31,7 +29,7 @@ function App() {
     <Container className="p-3">
       <h1 className="text-center">Users</h1>
       {isLoading && <h2>Loading</h2>}
-      <Row xs={1} md={2} className="g-4">
+      <Row xs={1} md={2} lg={3} className="g-4">
       {users.map((user) => (
         <User
           key={user.id}

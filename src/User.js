@@ -10,7 +10,7 @@ const User = ({ name, address, username, email, phone, company }) => {
       const dateCal = d.toDateString().split(' ').slice(1).join(' ');
   return (
     <div>
-      <Card style={{  }}>
+      <Card style={{ "height": "100%" }}>
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>
@@ -19,8 +19,8 @@ const User = ({ name, address, username, email, phone, company }) => {
           <div>
             <Card.Title>General Info</Card.Title>
             <p className="d-flex justify-content-between"><span>Date of Birth</span><span>{dateCal}</span></p>
-            <p className="d-flex justify-content-between"><span>Address</span><span>{address.street}, {address.suite}</span></p>
-            <p className="d-flex justify-content-between"><span>Email</span><span>{email}</span></p>
+            <p className="d-flex justify-content-between"><span>Address</span><span className="ms-4">{address.street}, {address.suite}</span></p>
+            <p className="d-flex justify-content-between"><span>Email</span><span className="ms-2">{email}</span></p>
             <p className="d-flex justify-content-between"><span>Phone</span><span>{phone}</span></p>
           </div>
         </Card.Body>

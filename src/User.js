@@ -6,7 +6,7 @@ const User = ({ name, address, username, email, phone, company }) => {
         return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
       }
       
-      const d = randomDate(new Date(2012, 0, 1), new Date());
+      const d = randomDate(new Date(1950, 0, 1), new Date());
       const dateCal = d.toDateString().split(' ').slice(1).join(' ');
   return (
     <div>
